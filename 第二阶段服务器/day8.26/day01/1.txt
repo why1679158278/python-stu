@@ -1,0 +1,23 @@
+1. 在month01下有个day01下面有个demo01.py
+   假设你在 主目录下 怎么找到这个文件
+
+ 绝对路径： /home/tarena/month01/day01/demo01.py
+ 相对路径:  month01/day01/demo01.py
+
+
+2. 先进入"图片" 文件夹，然后用cd直接进入到"下载"文件夹
+
+   cd ../下载
+   cd /home/tarena/下载
+
+作业 ：
+
+    1. 今天linux 命令使用熟练
+    2. 将第一阶段内容整理，tar压缩后保存
+    3. markdown 学习
+
+
+
+
+
+

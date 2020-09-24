@@ -1,0 +1,45 @@
+前情回顾
+
+1. 表的关联查询
+
+  内连接  tb1 inner join tb2 on 条件
+
+  外链接  tb1 left join tb2 on 条件
+         tb1 right join tb2 on 条件
+
+2. 视图
+
+   作用: 虚拟表 不会额外占有数据存储空间
+        操作视图就是操作源数据
+
+        简化复杂操作，数据安全，结构清晰
+
+   create or replace view [Name] as [Select]
+
+   drop view [if exists] [view]
+
+3. 函数 和 存储过程
+
+   delimiter xx;
+
+   create function func(uid int,...)
+   returns [return_type]
+   begin
+        函数体
+        return  val
+   end
+
+   create procedure proc(in uid int,...)
+   begin
+        sql语句
+   end
+
+练习: input输入一个人姓名，cls表查询出这个人的
+姓名，年龄，分数三个字段内容
+
+作业 ： 1. 总结下数据库内容   思维导图
+       2. 创建数据库 dict  使用utf8 编码
+          数据库下创建一张数据表 words 三个字段
+          id   word  mean
+
+          将dict.txt中的单词插入数据表中

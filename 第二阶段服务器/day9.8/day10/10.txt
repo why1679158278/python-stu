@@ -1,0 +1,97 @@
+前情回顾
+
+1. 事务控制
+
+   * 事务 ： 一件事情的执行过程
+
+   * begin  commit  rollback
+
+   * 原子性  一致性  隔离性  持久性
+
+   * 隔离级别 ： 读未提交  读已提交  可重复读  串行化
+
+2. 数据库优化
+
+   数据表设计范式
+
+   引擎的选择
+
+   字段类型和键的设置
+
+   sql语句的优化
+
+   表的拆分
+
+3. 数据库备份
+
+   create table [tb] select ....
+
+   mysqldump .
+
+4. 用户和权限
+
+   create user
+   drop user
+
+   权限处理 ： grant    revoke
+
+5. pymysql
+
+   打开 ： db = pymysql.connect()
+          cur = db.cursor()
+
+   读写数据 ： cur.execute()
+             cur.executemany()
+
+             fetchone() fetchall()  fetchmany()
+
+             commit()  rollback()
+
+   关闭 ： cur.close()
+          db.close()
+
+
+   文件存储
+
+数据管理 ：
+
+1. 文件处理
+
+   * 文件读写操作： open() read() write() close()
+   * 正则表达式： 提取匹配文本内容
+   程序 ： 学生管理系统
+
+2. 数据库
+
+   mysql 中sql语句的基本使用   重点
+
+      * 建库建表
+      * 增删改查
+      * 高级查询，索引，聚合
+      * 表关系建立，外键，连接查询
+
+   存储过程  事务  视图  优化
+
+   pymysql 使用
+
+
+练习1： 修改刚刚的代码，让客户端可以循环输入内容
+发送给服务端，服务端回复Thanks。 客户端输入exit
+时双方退出
+
+
+作业 ：
+1. 重点代码自己会写
+
+2. 使用udp套接字完成
+编写客户端和服务端，客户端可以循环的输入单词，
+从服务端那里获取单词的解释，打印出来
+
+服务端，接收客户端的单词，然后通过数据库查询得到
+单次解释发送给客户端，让客户端去打印
+
+提示： dict --》 words
+
+
+
+

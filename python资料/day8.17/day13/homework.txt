@@ -1,0 +1,31 @@
+1. 三合一
+2. 当天练习独立完成
+3. 画出下列代码内存图
+map = [
+    [2, 2, 8, 16],
+    [4, 2, 0, 2],
+    [2, 4, 2, 4],
+    [0, 4, 0, 4],
+]
+list_merge = map[0]
+list_merge[0] = 0
+print(map[0][0])# 0
+
+list_merge = map[1][::-1]
+list_merge[0] = 0
+map[1][::-1] = list_merge
+print(map[1])
+4. 小明使用手机打电话
+   要求:增加座机,卫星电话时不影响小明.
+   写出案例中体现的面向对象三大特征和六大原则.
+6. 准备面向对象答辩
+    链接：https://pan.baidu.com/s/1FUDhaDIfYttE89mMLLyreQ
+    提取码：vktf
+
+
+
+
+
+
+
+

@@ -1,0 +1,80 @@
+前情回顾
+
+1. 数据的基础操作
+   select col.. from [tb] where..
+
+   where 子句： 对行的筛选 算数 比较  逻辑
+
+   update  [tb]  set col=val,.. where
+
+   delete from [tb] where...
+
+2. 修改表结构
+
+   alter table [tb] add/modify/change..
+
+3. 时间数据类型
+   date  datetime  time   now()
+
+4. 高级查询
+
+   模糊查询 ： like    %  _
+   重命名 ： as
+   排序 ： order by
+   限制（分页）: limit  offset
+   联合查询 ： union （如果order by只能放最后，
+                   表示对union后的内容进行排序）
+   子查询 ： from后作为数据提供者
+            where中作为值的提供者
+
+4.聚合操作
+
+   聚合函数： sum() max()  min() avg()  count()
+
+   聚合分组： group by [col]
+
+练习1 使用book表:
+
+1. 统计每位作家出版图书的平均价格
+2. 统计每个出版社出版图书数量
+3. 查看总共有多少个出版社
+4. 筛选出那些出版过超过50元图书的出版社，并
+按照其出版图书的平均价格降序排序
+5. 统计同一时间出版图书的最高价格和最低价格
+
+
+cookie :
+    索引内部数据结构
+
+    BTree （B树）  （聚簇索引和非聚簇索引）
+
+    Hash  （哈希）
+
+
+思考问题 ：
+
+用户名  密码 电话  朋友圈内容 图片 地点 时间  点赞  评论
+小明              1xxxx                       xxx
+                  1xxx                       xxxx
+小明              2xxxx
+
+练习2 ： 根据所学的表关系设计，完成朋友圈内容的
+表设计
+
+
+作业 ： 1. 把book表拆分成三个部分
+            图书信息
+            作者信息
+            出版社信息
+
+          作者 可以 编写图书
+          出版社 可以 出版图书
+          出版社 可以 签约作者
+
+        可以先话 E-R 模型
+
+       2. 今天的语句
+
+
+
+
