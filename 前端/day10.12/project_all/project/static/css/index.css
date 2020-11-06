@@ -1,0 +1,352 @@
+/* 初始化页面元素样式 */
+h1,h2,h3,p,body,ul,ol,li{
+    margin: 0;
+    padding: 0;
+}
+ul,ol{
+    /* 清除列表默认样式(小圆点) */
+    list-style: none;
+}
+a{
+    /* 去掉下划线 */
+    text-decoration: none;
+}
+img{
+    display: block;
+}
+body{
+    /* font-size: 16px;
+    font-family: 'Courier New', Courier, monospace */
+    font:16px 'Courier New';
+}
+
+/******************* header *********************/
+header{
+    width: 100%;
+    height: 80px;
+    background-color: #555;
+    /* 固定定位 */
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+nav{
+    width: 80%;
+    height: 80px;
+    /* border: 1px solid red; */
+    margin: 0 auto;
+    line-height: 80px;
+}
+/* logo */
+.logo{
+    font-size: 26px;
+    float: left;
+}
+/* 15:05~15:20 */
+/* 覆盖超链接默认颜色 */
+.logo>a{
+    color: #c1edf2;
+}
+/* 导航菜单 ul */
+/* li水平排列  li中字体颜色#e5f2f2 
+   鼠标移入li时 字体变成白色 */
+/* 通过内外边距 调整导航菜单和logo的距离 
+   调整li之间的距离 */
+nav>ul{
+    float: left;
+    /* border: 1px solid red; */
+    margin-left:60px; 
+}
+nav>ul>li{
+    float: left;
+    padding: 0 10px;
+}
+nav>ul>li>a{
+    color: #e5f2f2;
+}
+nav>ul>li:hover>a{
+    color: #fff;
+}
+/* 15:53~16:10 */
+/* 注册登录 */
+/* 靠右侧显示  文本颜色#e5f2f2 调整注册登录之间的距离 */
+#login,#register{
+    float: right;
+    color: #e5f2f2;
+}
+#login{
+    margin-right:30px; 
+}
+
+
+/*****************main******************/
+main{
+    /* border: 5px solid red; */
+    width: 80%;
+    margin: 100px auto 0;
+    overflow: hidden;
+}
+.banner{
+    width: 66%;
+    float: left;
+}
+.fader{
+    width: 100%;
+    position: relative;
+}
+.slide{
+    width: 100%;
+}
+.slide img{
+    width: 100%;
+    height: 100%;
+}
+/* 图片上的文字 */
+/* 文字定位在.fader的下方 距离下方12% */
+/* 字体大小26px 半透明黑色背景  白色字体 距离左侧30px */
+.slide .imginfo{
+    /* width: 100%; */
+    font-size: 20px;
+    color: #fff;
+    background-color: rgba(0,0,0,0.4);
+    position: absolute;
+    bottom: 12%;
+    left: 0;
+    right: 0;
+    padding: 5px 0 5px 30px;
+}
+
+
+/* 轮播图左右箭头 */
+/* 相对fader做定位 */
+/* 09:56~10:10 */
+.prev,.next{
+    width: 35px;
+    height: 80px;
+    line-height: 80px;
+    font-size: 60px;
+    position: absolute;
+    top: 50%;
+    /* 对元素位置微调 垂直居中 */
+    margin-top:-40px;
+    opacity: 0;/*隐藏*/
+    transition: all 0.5s;
+    color: #fff;
+    cursor: pointer;
+}
+/*
+    prev 距离父元素左侧30px
+    next 距离父元素右侧30px
+    隐藏prev和next
+    鼠标移动到fader/li时
+    显示prev和next
+    调整位置 prev距离左侧0  next距离右侧0
+    过渡 0.5s
+*/
+.prev{
+    left:30px;
+}
+.next{
+    right:30px;
+}
+.fader:hover .prev{
+    opacity: 0.8;
+    left: 0;
+}
+.fader:hover .next{
+    opacity: 0.8;
+    right: 0;
+}
+
+/* 轮播图页标 */
+.fader .pager_list{
+    width: 100%;
+    height: 20px;
+    /* 设置文本内容水平垂直居中 */
+    line-height: 20px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+}
+.pager_list li{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.6;
+    display: inline-block;
+}
+
+
+/* 右侧toppic */
+.toppic{
+    width: 32%;
+    float: right;
+}
+.toppic li{
+    position: relative;
+}
+.toppic .last{
+    margin-top:14px;
+}
+.toppic li img{
+    width: 100%;
+    height: 135px;
+}
+/* 图片中的文字 */
+/* div 参照li做绝对定位 定位在li下方 宽度100%
+   调整文字距离 半透明深黑色背景  白色字体 
+*/
+.toppic li div{
+    position: absolute;
+    color:#fff;
+    background-color: rgba(0,0,0,0.7);
+    padding: 3px 0 3px 5px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+/* span 参照li做绝对定位 定位在li左上角 距离左上15px
+   半透明深黑色背景  白色字体 字体水平垂直居中 
+   字体大小12px 边框圆角3px
+*/
+.toppic li span{
+    font-size: 12px;
+    padding: 2px 3px;
+    border-radius: 3px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    color: #fff;
+    background-color: rgba(0,0,0,0.7);
+}
+
+/*图片遮罩层*/
+.toppic li i{
+    display: block;
+    /* 不透明度 0(透明)~1(不透明) */
+    opacity: 0.7;
+    /* 过渡  效果切换在1秒内执行 */
+    transition: all 1s;
+}
+/* 让半透明的遮罩层漏出底部的黑色背景 让图片变暗 */
+.toppic li{
+    background-color: #000;
+}
+/* 鼠标悬停在i标签时 
+图片不透明,显示不出黑色背景,感觉图片变亮了 */
+.toppic li i:hover{
+    opacity: 1;
+}
+
+
+
+/******************blogs*******************/
+.clear{
+    clear: both;
+    margin-bottom: 20px;
+}
+
+body{
+    background-color: #f2f2f0;
+}
+
+/* 每条博客 */
+.blogs{
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    /* 防止子元素脱离文档流父元素高度消失的问题 */
+    overflow: hidden;
+}
+/* 标题 */
+.blogtitle{
+    font-size: 20px;
+}
+.blogtitle a{
+    color: #555;
+}
+.blogtitle a:hover{
+    color: #337ab7;
+}
+
+/* 图片 */
+.blogpic{
+    width: 30%;
+    height: 170px;
+    float: left;
+    /* 图片缩放时可能会超出父元素 */
+    /* 超出部分隐藏 */
+    overflow: hidden;
+    /* 调整上 右距离 */
+    margin: 10px 15px 0 0;
+}
+.blogpic img{
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s;
+}
+.blogpic img:hover{
+    /* 缩放 单位为数值  1表示原本大小  
+    1.1表示原本的1.1倍大小*/
+    transform: scale(1.1)
+}
+
+/* 博客内容 */
+.blogtext{
+    font-size: 14px;
+    color: #566573;
+    margin-top:10px; 
+}
+
+/* 信息列表 */
+/* 让li水平排列 调整左右距离
+超链接文字颜色#748594 文字大小12px 
+鼠标移入时超链接文本颜色变成黑色 
+设置背景图片 auicon.jpg  按照顺序显示不同的小图标
+*/
+.blogs li{
+    height: 18px;
+    line-height: 18px;
+    font-size: 12px;
+    float: left;
+    margin: 30px 15px 0 0;
+    /* 调整文字和左边框的距离 露出背景图片 */
+    padding-left:18px; 
+    background-image: url('../images/auicon.jpg');
+    background-repeat: no-repeat;
+}
+.blogs li a{
+    color: #748594;
+}
+.blogs li a:hover{
+    color: #000;
+}
+/* 调整每个小图标的偏移位置  显示所有小图标 */
+.lmname{
+    background-position-y:-25px ; 
+}
+.timer{
+    background-position-y:-46px; 
+}
+.view{
+    background-position-y:-66px; 
+}
+.like{
+    background-position-y:-87px; 
+}
+
+/***************footer******************/
+footer{
+    width: 100%;
+    background-color: #555;
+    color:#a5a4a4;
+    text-align: center;
+    padding: 20px 0;
+}
+footer a{
+    color: #a5a4a4;
+}
+footer a:hover{
+    color: #c1edf2;
+}

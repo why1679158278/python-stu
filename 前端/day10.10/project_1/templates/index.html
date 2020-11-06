@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>博客-首页</title>
+    <!-- 引入外部文件 -->
+    <link rel="stylesheet" href="../static/css/index.css">
+
+</head>
+
+<body>
+    <!-- <div id="header"></div>
+    <div id="main"></div>
+    <div id="footer"></div> -->
+
+    <!-- html5  语义化标签 -->
+    <!-- 头部 -->
+    <header>
+        <!-- 导航栏 -->
+        <nav>
+            <!-- logo -->
+            <h1 class="logo">
+                <a href="#">个人博客</a>
+            </h1>
+            <!-- 导航菜单 -->
+            <!-- ul>li*6>a -->
+            <ul>
+                <li><a href="#">网站首页</a></li>
+                <li><a href="#">文章列表</a></li>
+                <li><a href="#">我的相册</a></li>
+                <li><a href="#">留言</a></li>
+                <li><a href="#">关于我</a></li>
+                <li><a href="#">发表博客</a></li>
+            </ul>
+            <!-- 登录注册 -->
+            <div>
+                <a href="#" id="register">注册</a>
+                <a href="#" id="login">登录</a>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <!-- 主体 -->
+    <main>
+        <!-- 上半部分 轮播图+侧边图片 -->
+        <div>
+            <!-- 左侧轮播图 -->
+            <div class="banner">
+                <ul class="fader">
+                    <!-- 每一张轮播图 -->
+                    <li class="silde">
+                        <a href="#">
+                            <img src="../static/images/banner01.jpg" alt="">
+                            <span class="imginfo">
+                                爬虫微课5小时 Python学习路线!
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 右侧侧边图片 -->
+            <!-- 16:58~17:15 -->
+            <ul class="toppic">
+                <li>
+                    <a href="#">
+                        <img src="../static/images/toppic01.jpg" alt="">
+                        <div>升级安装py3,安装pip,svn</div>
+                        <span>linux</span>
+                    </a>
+                </li>
+                <li class="last">
+                    <a href="#">
+                        <img src="../static/images/toppic02.jpg" alt="">
+                        <div>升级安装py3,安装pip,svn</div>
+                        <span>python</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 下半部分 博客列表 -->
+    </main>
+    <!-- 底部 -->
+    <footer></footer>
+</body>
+
+</html>

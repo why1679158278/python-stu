@@ -1,0 +1,163 @@
+/* 初始化页面元素样式 */
+h1,h2,h3,p,body,ul,ol,li{
+    margin: 0;
+    padding: 0;
+}
+ul,ol{
+    /* 清除列表默认样式(小圆点) */
+    list-style: none;
+}
+a{
+    /* 去掉下划线 */
+    text-decoration: none;
+}
+img{
+    display: block;
+}
+body{
+    /* font-size: 16px;
+    font-family: 'Courier New', Courier, monospace */
+    font:16px 'Courier New';
+}
+
+/******************* header *********************/
+header{
+    width: 100%;
+    height: 80px;
+    background-color: #555;
+    /* 固定定位 */
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+nav{
+    width: 80%;
+    height: 80px;
+    /* border: 1px solid red; */
+    margin: 0 auto;
+    line-height: 80px;
+}
+/* logo */
+.logo{
+    font-size: 26px;
+    float: left;
+}
+/* 15:05~15:20 */
+/* 覆盖超链接默认颜色 */
+.logo>a{
+    color: #c1edf2;
+}
+/* 导航菜单 ul */
+/* li水平排列  li中字体颜色#e5f2f2 
+   鼠标移入li时 字体变成白色 */
+/* 通过内外边距 调整导航菜单和logo的距离 
+   调整li之间的距离 */
+nav>ul{
+    float: left;
+    /* border: 1px solid red; */
+    margin-left:60px; 
+}
+nav>ul>li{
+    float: left;
+    padding: 0 10px;
+}
+nav>ul>li>a{
+    color: #e5f2f2;
+}
+nav>ul>li:hover>a{
+    color: #fff;
+}
+/* 15:53~16:10 */
+/* 注册登录 */
+/* 靠右侧显示  文本颜色#e5f2f2 调整注册登录之间的距离 */
+#login,#register{
+    float: right;
+    color: #e5f2f2;
+}
+#login{
+    margin-right:30px; 
+}
+
+
+/*****************main******************/
+main{
+    border: 5px solid red;
+    width: 80%;
+    margin: 100px auto 0;
+    overflow: hidden;
+}
+.banner{
+    width: 66%;
+    float: left;
+}
+.fader{
+    width: 100%;
+    position: relative;
+}
+.silde{
+    width: 100%;
+}
+.silde img{
+    width: 100%;
+    height: 100%;
+}
+/* 图片上的文字 */
+/* 文字定位在.fader的下方 距离下方12% */
+/* 字体大小26px 半透明黑色背景  白色字体 距离左侧30px */
+.silde .imginfo{
+    /* width: 100%; */
+    font-size: 20px;
+    color: #fff;
+    background-color: rgba(0,0,0,0.4);
+    position: absolute;
+    bottom: 12%;
+    left: 0;
+    right: 0;
+    padding: 5px 0 5px 30px;
+}
+
+
+
+
+/* 右侧toppic */
+.toppic{
+    width: 32%;
+    float: right;
+}
+.toppic li{
+    position: relative;
+}
+.toppic .last{
+    margin-top:14px;
+}
+.toppic li img{
+    width: 100%;
+    height: 135px;
+}
+/* 图片中的文字 */
+/* div 参照li做绝对定位 定位在li下方 宽度100%
+   调整文字距离 半透明深黑色背景  白色字体 
+*/
+.toppic li div{
+    position: absolute;
+    color:#fff;
+    background-color: rgba(0,0,0,0.7);
+    padding: 3px 0 3px 5px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+/* span 参照li做绝对定位 定位在li左上角 距离左上15px
+   半透明深黑色背景  白色字体 字体水平垂直居中 
+   字体大小12px 边框圆角3px
+*/
+.toppic li span{
+    font-size: 12px;
+    padding: 2px 3px;
+    border-radius: 3px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    color: #fff;
+    background-color: rgba(0,0,0,0.7);
+}

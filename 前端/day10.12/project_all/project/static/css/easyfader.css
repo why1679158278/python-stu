@@ -1,0 +1,42 @@
+/* 在使用easyfader框架/index.js动态生成元素之后 */
+/* 对index.css样式进行补充 */
+
+/*使用上内边距支撑页面内容的大小*/
+/* 内外边距如果单位为百分比的话 相对于当前的宽度的百分比 */
+.fader{
+    padding-top: 60%;
+}
+/* 每张轮播图 */
+.fader .slide{
+    height: 100%;
+    position: absolute;
+    top: 0;
+    /* 轮播属性 */
+    opacity: 0;
+    z-index: 1;
+    transition: all 0.5s;
+}
+/*调整侧边toppic图片大小*/
+/* 重写图片高度和图片的距离 */
+.toppic li img{
+    height: 145px;
+}
+.toppic .last{
+    margin-top:13px;
+}
+/* 图片轮播后 每个显示的li的zindex为3 */
+/* 想要显示左右箭头和页标 需要设置zindex */
+.prev,.next,.pager_list{
+    z-index: 4;
+}
+/* 设置页标样式 */
+/* 距离  去掉文字  鼠标移入*/
+.pager_list li{
+    margin: 0 5px;
+    /* 文本缩进 隐藏不想要的文本 */
+    text-indent: -9999px;
+}
+.pager_list li:hover,.pager_list .active{
+    opacity: 1;
+    cursor: pointer;
+}

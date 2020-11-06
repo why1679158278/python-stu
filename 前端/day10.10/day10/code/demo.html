@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        window.onload = function () {
+            // 文档加载完毕后执行JS代码
+
+        }
+        $(function () {
+            // 文档加载完毕后执行JS代码
+            $('div').html('hello world').css({
+                "font-size": "32px",
+                "font-weight": "bold"
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div></div>
+    <ul>
+        <div>这是div元素</div>
+    </ul>
+    <button>添加item</button>
+    <script>
+        $(function () {
+            // 文档加载完毕后执行JS代码
+            // 点击按钮  添加列表项
+            $('button').on('click', function () {
+                // 动态创建li标签 
+                // 添加到页面
+                $('ul').append('<li>item</li>')
+            })
+
+            // 事件委托 
+            // 将事件通过on函数绑定给已存在的父元素
+            // 然后指定一个子元素选择器 只有指定的选择器可以触发事件
+            $('ul').on('click','li',function(){
+                alert('ok')
+            })
+
+
+
+            // 动态创建的标签没有办法直接绑定事件
+            // 点击li 弹框
+            // $('li').click(function () {
+            //     alert('hello')
+            // })
+
+
+
+
+
+            $('div').css('color', 'red')
+        })
+    </script>
+</body>
+
+</html>

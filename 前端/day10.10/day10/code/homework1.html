@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <select name="" id="prov">
+       
+    </select>
+    <select name="" id="city"></select>
+    <select name="" id="area"></select>
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/data.js"></script>
+    <script>
+        var prov = $('#prov');
+        var city = $('#city');
+        var area = $('#area');
+
+        prov.append('<option value="0">请选择</option>');
+        city.append('<option value="0">请选择</option>');
+        area.append('<option value="0">请选择</option>');
+
+
+        // 获取省份下拉菜单中的数据
+        console.log(data);
+        // 遍历data获取到每一个省份对象
+        $.each(data,function(i,p){
+            // 通过省份对象生成选项 添加到prov中
+            prov.append(`<option value="${p.provId}">${p.provname}</option>`)
+        })
+        
+
+        // 省份下拉菜单的值改变时 加载城市
+        // 遍历data 如果当前的省份对象p的provId 
+        // 和 省份下拉菜单的值一致 说明找到用户选择的省份
+        // 遍历 p.citys 生成城市对象 添加到城市下拉菜单
+        prov.change(function(){
+            if(prov.val() == 0){
+                city.html('<option value="0">请选择</option>');
+            }
+            if(city.val() == 0){
+                // 如果城市变成请选择时 初始化地区
+                area.html('<option value="0">请选择</option>');
+            }
+            $.each(data,function(i,p){
+                if(p.provId == prov.val()){
+                    city.html(`<option value="0">请选择</option>`)
+                    area.html('<option value="0">请选择</option>');
+                    $.each(p.citys,function(i,c){
+                        city.append(`<option value="${c.cityId}">${c.cityname}</option>`)
+                    })
+                }
+            })
+        })
+
+
+        // 城市下拉菜单的值改变时 加载对应的地区
+        // 遍历data 找到当前的省份对象 获取城市数组
+        // 遍历城市数组 
+        // 如果当前城市的cityId等于城市下拉菜单的值时
+        // 说明找到当前城市 获取当前城市所对应的地区 c.areas
+        // 遍历c.areas 获取每一个地区对象 构建页面元素 添加到页面
+        city.change(function(){
+            if(city.val() == 0){
+                // 如果城市变成请选择时 初始化地区
+                area.html('<option value="0">请选择</option>');
+            }
+            // 11:12~11:25
+            $.each(data,function(i,p){
+                if(p.provId == prov.val()){
+                    $.each(p.citys,function(i,c){
+                        if(c.cityId == city.val()){
+                            area.html('<option value="0">请选择</option>');
+
+                            $.each(c.areas,function(i,a){
+                                area.append(`<option value="${a.areaId}">${a.areaname}</option>`)
+                            })
+                        }
+                    })
+                }
+            })
+        })
+    </script>
+</body>
+</html>

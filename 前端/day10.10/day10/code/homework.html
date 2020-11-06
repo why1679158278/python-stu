@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>级联下拉菜单</title>
+</head>
+<body>
+    <!-- 城市下拉菜单 -->
+    <select name="" id="city">
+    </select>
+    <!-- 地区下拉菜单 -->
+    <select name="" id="area"></select>
+
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        var data = [
+            {
+                "cityName":"北京",
+                "cityId":1,
+                "areas":[
+                    {"areaName":"东城区","areaId":101},
+                    {"areaName":"西城区","areaId":102}
+                ]
+            },
+            {
+                "cityName":"上海",
+                "cityId":2,
+                "areas":[
+                    {"areaName":"黄埔区","areaId":201},
+                    {"areaName":"静安区","areaId":202}
+                ]
+            }
+        ]
+    
+        // 初始化页面内容
+        var city = $('#city');
+        var area = $('#area');
+        city.html('<option value="0">请选择</option>');
+        area.html('<option value="0">请选择</option>');
+    
+        // 加载城市数据
+        $.each(data,function(i,o){
+            // 通过当前对象o构建页面元素
+            var html = $(`<option value="${o.cityId}">${o.cityName}</option>`);
+            // 将创建好的页面元素添加到city中
+            city.append(html);
+        })
+        // 当city的内容发生改变时 加载对应的地区
+        city.change(function(){
+            // alert('ok')
+            // 打印城市下拉菜单的值
+            // console.log($(this).val());
+            // 遍历data 
+            // 如果city下拉菜单的值 和当前城市对象的cityId一致
+            // 说明找到用户选择的城市对象
+            // 获取城市对象的地区
+            // 10:05~10:20
+            $.each(data,function(i,o){
+                if(o.cityId == city.val()){
+                    console.log(o.areas);
+                    // 初始化地区下拉菜单
+                    area.html('<option value="0">请选择</option>');
+                    // 遍历地区  生成选项添加到页面
+                    $.each(o.areas,function(i,a){
+                        var html = $(`<option value="${a.areaId}">${a.areaName}</option>`)
+                        // 追加内容 不会清空原有内容
+                        area.append(html);
+                    })
+                }
+            })
+
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,223 @@
+h1,h2,h3,h4,h5,body,ol,ul,li{
+    margin: 0;
+    padding: 0;
+}
+ul,ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    /* font-size: 20px; */
+}
+image{
+    display: block;
+}
+body{
+    font: 16px 'Courier new';
+    /* font-family: 'Courier New', Courier, monospace; */
+}
+
+/************head******************/
+header{
+    width: 100%;
+    height: 80px;
+    background-color: #555;
+    /* border: 1px solid red; */
+    position: fixed;
+    top: 0px;
+    z-index: 999;
+}
+nav{
+    width: 80%;
+    height: 80px;
+    line-height: 80px;
+    /* border: 1px solid red; */
+    margin: 0 auto;
+}
+#logo_title{
+    float: left;
+    padding-left: 50px;
+}
+#logo_title>a{
+    color: #c1edf2;
+    font-size: 20px;
+}
+nav>ul{
+    float: left;
+    /* border: 1px solid blue; */
+    margin-left: 60px;
+}
+nav>ul>li{
+    float: left;
+    padding: 0px 10px;
+}
+nav>ul>li>a{
+    color: #e5f2f2;
+}
+nav>ul>li>a:hover{
+    color: #fff;
+}
+nav>.login{
+    float: right;
+    padding-right: 20px;
+
+}
+
+/***************main_banner**********************/
+main{
+    /* border: 1px solid red; */
+    width: 80%;
+    overflow: hidden;
+    margin: 85px auto 0px;
+}
+.upsid{
+    width: 100%;
+    /* border: 3px solid blue; */
+    /* height: 351px; */
+    /* position: relative; */
+    overflow: hidden;
+}
+.banner{
+    padding-top: 20;
+    width: 66%;
+    float: left;
+}
+.fader{
+    width: 100%;
+    position: relative;
+}
+.fader img{
+    width: 100%;
+    height: 100%;
+}
+.fader span{
+    font-size: 20px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.4);
+    /* border: 1px solid red; */
+    position: absolute;
+    bottom: 12%;
+    left: 0;
+    right: 0;
+    padding: 5px 0px 5px 30px;
+}
+
+/**********右侧选着栏***********/
+
+
+.right{
+    width: 33%;
+    float: right;
+    
+}
+.right_side{
+    width: 100%;
+   
+}
+.right_side li{
+    /* border:3px solid red; */
+    position: relative;
+}
+.right_side_down{
+    margin-top: 10px;
+}
+.right_side li img{
+    width: 100%;
+    height: 190px;
+    
+}
+.right_side  div{
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 3px 0 3px 5px;
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    right: 0;
+}
+.right_side span{
+    font-size: 12px;
+    padding: 2px 3px;
+    border-radius: 3px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+
+/********************下部文章列表***************/
+.down_list{
+    width: 100%;
+    background-color:#fff;
+    padding-top: 10px;
+    /* border: 2px solid blue; */
+    position: relative;
+    bottom: 0px;
+    padding-top: 20px;
+    overflow: hidden;
+}
+.list_left{
+    width: 35%;
+    float: left;
+    /* border: 1px solid red; */
+    /* overflow: hidden; */
+    margin: 15px;
+
+}
+.down_img img{
+    width: 100%;
+    
+}
+.down_text span{
+    width: 100%;
+    font-weight:bold;
+    font-size: 23px;
+    color: #555;
+    margin: 15px;
+    position: relative;
+    bottom: 10px;
+    /* margin: auto; */
+}
+.down_text span:hover{
+    color:rgb(66, 66, 168);
+}
+.sign>ul{
+    width: 50%;
+    float: left;
+    margin-left: 10px;
+}
+.sign>ul>li{
+    float: left;
+    /* position: relative; */
+    margin: auto;
+    padding: 2px 15px;
+
+}
+.sign>ul>li span{
+    color: #777;
+    font-size: 13px;
+}
+.sign>ul>li span:hover{
+    color: #000;
+}
+.time span{
+    position: relative;
+    top: 2px;
+}
+.zhan span{
+    position: relative;
+    top: 2px;
+}
+.essay>li>p{
+   
+    font-size: 14px;
+    color: #777;
+
+}
+.essay{
+    position:relative;
+    top: 40px;
+}
